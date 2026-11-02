@@ -27,9 +27,9 @@ Then ask: "Check this caption with instagram-safe-content".
 این اسکیل قبل از انتشار، پست، ریلز، استوری، کپشن، دایرکت و انتشار خودکار رو با قوانین رسمی Meta و اینستاگرام چک می‌کنه تا محتوا حذف نشه، از پیشنهاد به غیرفالوورها نیفته و پیج در خطر نباشه. هر قانون منبع رسمی داره و مواردی که فقط تجربه‌ی کاربرهاست جدا علامت خورده.
 
 ## Made by
-JamzStudio, the team behind **[Storya](https://storyainsta.ir)**: a Persian tool that schedules Instagram Stories, posts and Reels through the official Instagram API and publishes them on time. We built this checklist for our own pages and share it free.
+**Saeed SheikhAmiri**, in collaboration with the team behind **[Storya](https://storyainsta.ir)**: a Persian tool that schedules Instagram Stories, posts and Reels through the official Instagram API and publishes them on time. Shared free for anyone who publishes on Instagram.
 
-ساخته‌ی تیم استوریا (StoryaInsta.ir)، ابزار زمان‌بندی و انتشار خودکار استوری، پست و ریلز با API رسمی اینستاگرام.
+ساخته‌ی سعید شیخ‌امیری، با همکاری تیم استوریا (StoryaInsta.ir)، ابزار زمان‌بندی و انتشار خودکار استوری، پست و ریلز با API رسمی اینستاگرام.
 
 ## License
 MIT. Rules change often: verify against the linked official pages before relying on them.
