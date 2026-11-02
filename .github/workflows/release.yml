@@ -1,7 +1,9 @@
 name: Release
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths: ['instagram-safe-content/**', '.github/workflows/release.yml']
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -9,12 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Build skill zip
         run: zip -r instagram-safe-content.zip instagram-safe-content
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" instagram-safe-content.zip \
-            --title "$GITHUB_REF_NAME · Instagram Safe Content skill" \
+          V="v1.$(git rev-list --count HEAD -- instagram-safe-content)"
+          gh release view "$V" >/dev/null 2>&1 && exit 0
+          gh release create "$V" instagram-safe-content.zip --target "$GITHUB_SHA" \
+            --title "$V · Instagram Safe Content skill" \
             --notes "Download instagram-safe-content.zip and upload it in Claude under Settings > Capabilities > Skills, or copy the instagram-safe-content folder into ~/.claude/skills/ for Claude Code. Rules checked against Meta's official sources on 2026-11-02."
