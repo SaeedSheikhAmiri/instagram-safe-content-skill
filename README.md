@@ -18,7 +18,7 @@ Every rule is tagged by weight: **REMOVED**, **NOT RECOMMENDED**, **REQUIRED**, 
 - A 14-point pre-publish checklist and a short report format
 
 ## Install
-- **Claude (claude.ai / desktop):** download `instagram-safe-content.zip` from Releases (or zip the `instagram-safe-content` folder) and upload it under Settings, Capabilities, Skills.
+- **Claude (claude.ai / desktop):** download [`dist/instagram-safe-content.zip`](https://github.com/SaeedSheikhAmiri/instagram-safe-content-skill/raw/main/dist/instagram-safe-content.zip) and upload it under Settings, Capabilities, Skills.
 - **Claude Code:** copy the `instagram-safe-content` folder into `~/.claude/skills/`.
 
 Then ask: "Check this caption with instagram-safe-content".
