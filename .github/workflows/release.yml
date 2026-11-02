@@ -1,0 +1,20 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build skill zip
+        run: zip -r instagram-safe-content.zip instagram-safe-content
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" instagram-safe-content.zip \
+            --title "$GITHUB_REF_NAME · Instagram Safe Content skill" \
+            --notes "Download instagram-safe-content.zip and upload it in Claude under Settings > Capabilities > Skills, or copy the instagram-safe-content folder into ~/.claude/skills/ for Claude Code. Rules checked against Meta's official sources on 2026-11-02."
